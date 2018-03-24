@@ -1,7 +1,7 @@
 <!-- Header -->
 <?php include 'views/partials/_header.php';?>
 <!-- DB Config -->
-<?php require_once($_SERVER["DOCUMENT_ROOT"] . 'config/db_config.php');?>
+<?php require_once('config/db_config.php');?>
 <body>
   <div class="container">
     <!-- Nav -->
