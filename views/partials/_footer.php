@@ -7,7 +7,7 @@
       <a class="nav-link" href="<?php echo $environment; ?>user_session/login.php">Login</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo $environment; ?>/views/pages/about.php">Link</a>
+      <a class="nav-link" href="<?php echo $environment; ?>/talent/talent_index.php">Talent</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="<?php echo $environment; ?>/views/pages/about.php">Link</a>
