@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Venue Finder</title>
+    <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_var.php"); ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./public/css/custom.css">
+    <link rel="stylesheet" href="<?php echo $environment; ?>/public/css/custom.css">
   </head>
   <body>
-
-  <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_var.php"); ?>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Gig Hub</a>

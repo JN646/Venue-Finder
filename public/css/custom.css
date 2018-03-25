@@ -7,3 +7,10 @@ body {
 .container {
   background-color: #fff;
 }
+
+#jumboHome {
+  color: white;
+  background-image: url(https://picsum.photos/1600/300);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
