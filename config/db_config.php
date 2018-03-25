@@ -1,4 +1,5 @@
  <?php
+
 //Customise this file to match your server configutation. If you are unsure what settings these need to be, then contact you system administrator.
 
 //MySQL connection
