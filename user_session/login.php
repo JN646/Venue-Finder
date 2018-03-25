@@ -5,7 +5,7 @@
 <body>
   <div class="container">
     <!-- Nav -->
-    <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/db_config.php"); ?>
+    <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
       <h1>Login</h1>
       <form>
