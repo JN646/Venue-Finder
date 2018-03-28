@@ -3,7 +3,7 @@
 <!-- DB Config -->
 <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_config.php"); ?>
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
 
@@ -11,16 +11,16 @@
       <h1>Talent Registration</h1>
 
       <!-- Registration Form -->
-      <form class="" action="index.html" method="post">
+      <form class="form-group" action="index.html" method="post">
 
         <!-- Name -->
         <label for="">Name/Act</label>
-        <input type="text" name="" value="">
+        <input class="form-control" type="text" name="" value="">
         <br>
 
         <!-- Type -->
         <label for="">Type of Act</label>
-        <select class="" name="">
+        <select class="form-control" name="">
           <option value="">Musician</option>
           <option value="">Band</option>
           <option value="">DJ</option>
@@ -30,26 +30,28 @@
 
         <!-- County -->
         <label for="">County</label>
-        <input type="text" name="" value="">
+        <input class="form-control" type="text" name="" value="">
         <br>
 
         <!-- Postcode -->
         <label for="">Postcode</label>
-        <input type="text" name="" value="">
+        <input class="form-control" type="text" name="" value="">
         <br>
 
         <!-- Distance to Travel -->
         <label for="">Distance to Travel</label>
-        <input type="text" name="" value="">
+        <input class="form-control" type="text" name="" value="">
         <br>
 
         <!-- Terms and conditions -->
         <p>I accept the terms and conditions.</p>
-        <input type="checkbox" name="" value="">
+
+        <!-- Disable button until checked -->
+        <input id='CheckTerms' class="form-control" type="checkbox" name="" value="" onchange="document.getElementById('submitButton').disabled = !this.checked;">
+        <br>
 
         <!-- Submit Button -->
-        <button type="submit" name="submit">Submit</button>
-
+        <button id='submitButton' class="btn btn-primary" type="submit" name="submit">Submit</button>
       </form>
     </div>
   <!-- Footer -->
