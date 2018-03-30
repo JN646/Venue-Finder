@@ -30,7 +30,7 @@
           <div class="col-md-12 border">
             <h2>Entertainers</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" name="button" class="btn btn-primary">Link</button>
+            <a class="btn btn-primary" href="<?php echo $environment; ?>/views/pages/talent.php">Talent</a>
           </div>
         </div>
 
@@ -39,7 +39,7 @@
           <div class="col-md-12 border">
             <h2>Venues</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" name="button" class="btn btn-primary">Link</button>
+            <a class="btn btn-primary" href="<?php echo $environment; ?>/views/pages/venues.php">Venues</a>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
           <div class="col-md-12 border">
             <h2>Something Else</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button type="button" name="button" class="btn btn-primary">Link</button>
+            <a class="btn btn-primary" href="<?php echo $environment; ?>/views/pages/about.php">Something Else</a>
           </div>
         </div>
 
