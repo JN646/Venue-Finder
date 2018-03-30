@@ -38,7 +38,7 @@ class ApplicationVersion
       <a class="nav-link" href="<?php echo $environment; ?>user_session/register.php">Register</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo $environment; ?>/views/pages/about.php">Link</a>
+      <a class="nav-link" href="<?php echo $environment; ?>/talent/talent_listing.php">Listing</a>
     </li>
   </ul>
 </nav>
