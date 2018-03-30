@@ -24,7 +24,7 @@ class ApplicationVersion
 
 <!-- Footer Content -->
 <hr>
-<p class="text-center">Copyright (c) 2018 Copyright Holder All Rights Reserved.</p>
+<p class="text-center">Copyright &copy; 2018 Copyright Holder All Rights Reserved.</p>
 <p class="text-center" style='font-size: 80%;'><?php echo 'Version ' . ApplicationVersion::get(); ?></p>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav mr-auto">
