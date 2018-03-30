@@ -11,6 +11,7 @@
           <img src="https://picsum.photos/150" alt="Profile Picture" width="100%">
           <h3>Sidebar</h3>
           <p>Rating:</p>
+          <p>Bookings:</p>
           <p>Type:</p>
           <p>Subtype:</p>
           <p>Location:</p>
