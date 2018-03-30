@@ -71,7 +71,7 @@
                   // Attempt to execute the prepared statement
                   if($stmt->execute()){
                       // Redirect to login page
-                      header("location: ../dashboard/dashboard.php");
+                      header("location: ../talent/talent_welcome.php");
                   } else{
                       echo "Something went wrong. Please try again later.";
                   }
