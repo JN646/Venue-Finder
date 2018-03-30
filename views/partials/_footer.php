@@ -1,6 +1,31 @@
 <!-- Footer -->
+
+<!-- Get Application Version from Git -->
+<?php
+class ApplicationVersion
+{
+    const MAJOR = 1;
+    const MINOR = 2;
+    const PATCH = 3;
+
+    public static function get()
+    {
+        $commitHash = trim(exec('git log --pretty="%h" -n1 HEAD'));
+
+        $commitDate = new \DateTime(trim(exec('git log -n1 --pretty=%ci HEAD')));
+        $commitDate->setTimezone(new \DateTimeZone('UTC'));
+
+        return sprintf('v%s.%s.%s-dev.%s (%s)', self::MAJOR, self::MINOR, self::PATCH, $commitHash, $commitDate->format('Y-m-d H:m:s'));
+    }
+}
+
+// Usage: echo 'MyApplication ' . ApplicationVersion::get();
+?>
+
+<!-- Footer Content -->
 <hr>
 <p class="text-center">Copyright (c) 2018 Copyright Holder All Rights Reserved.</p>
+<p class="text-center" style='font-size: 80%;'><?php echo 'Version ' . ApplicationVersion::get(); ?></p>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
