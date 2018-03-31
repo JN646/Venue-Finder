@@ -2,6 +2,7 @@
 <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_header.php"); ?>
 <!-- DB Config -->
 <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_config.php"); ?>
+<?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/functions/func_countstat.php"); ?>
 <body>
   <div class="container-fluid">
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
@@ -67,28 +68,23 @@
 
         <!-- Number of Artists -->
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="col-md-12 border border-primary">
-              <?php
-                $query = "SELECT COUNT(*) FROM talent";
-                $result = mysqli_query($mysqli,$query);
-                $rows = mysqli_fetch_row($result);
-              ?>
               <h1 class='text-center'>Talent</h1>
-              <h1 class='text-center display-4'><?php echo $rows[0]; ?></h1>
+              <h1 class='text-center display-4'><?php echo StatCounters::counterTalent() ?></h1>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="col-md-12 border border-primary">
-              <?php
-                $query = "SELECT COUNT(*) FROM venue";
-                $result = mysqli_query($mysqli,$query);
-                $rows = mysqli_fetch_row($result);
-              ?>
               <h1 class='text-center'>Venues</h1>
-              <h1 class='text-center display-4'><?php echo $rows[0]; ?></h1>
+              <h1 class='text-center display-4'><?php echo StatCounters::counterVenues() ?></h1>
             </div>
-
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-12 border border-primary">
+              <h1 class='text-center'>Events</h1>
+              <h1 class='text-center display-4'><?php echo StatCounters::counterEvents() ?></h1>
+            </div>
           </div>
         </div>
     </div>
