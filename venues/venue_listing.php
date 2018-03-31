@@ -6,16 +6,31 @@
   <div class="container-fluid">
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
-      <!-- Talent Listing -->
-      <h1>Talent List</h1>
+      <!-- Venue Listing -->
+      <h1>Venue List</h1>
       <?php
-      $sql = "SELECT talent_id, talent_name, talent_type FROM talent";
+      $sql = "SELECT * FROM venue";
       $result = mysqli_query($mysqli, $sql);
       if (mysqli_num_rows($result) > 0) {
           // output data of each row
+          echo "<table class='table table-bordered'>";
+              echo "<tr>";
+                  echo "<th class='text-center'>ID</th>";
+                  echo "<th class='text-center'>Name</th>";
+                  echo "<th class='text-center'>Type</th>";
+                  echo "<th class='text-center'>Country</th>";
+                  echo "<th class='text-center'>Town</th>";
+              echo "</tr>";
           while($row = mysqli_fetch_assoc($result)) {
-              echo " " . $row["talent_id"]. " - " . $row["talent_name"]. " - " . $row["talent_type"]. "<br>";
+              echo "<tr>";
+                  echo "<td class='text-center'>" . $row["venue_id"] . "</th>";
+                  echo "<td class='text-center'>" . $row["venue_name"] . "</th>";
+                  echo "<td class='text-center'>" . $row["venue_type"] . "</th>";
+                  echo "<td class='text-center'>" . $row["venue_country"] . "</th>";
+                  echo "<td class='text-center'>" . $row["venue_town"] . "</th>";
+              echo "</tr>";
           }
+          echo "</table>";
       } else {
           echo "0 results";
       }
