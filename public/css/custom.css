@@ -19,6 +19,7 @@ body {
 }
 #jumboAbout {
   color: white;
+  background-color: black;
   background-image: url(../images/openmic.jpg);
   background-repeat: no-repeat;
   background-size: cover;
