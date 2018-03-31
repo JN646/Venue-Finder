@@ -69,14 +69,24 @@
         <div class="row">
           <div class="col-md-6">
             <div class="col-md-12 border border-primary">
+              <?php
+                $query = "SELECT COUNT(*) FROM talent";
+                $result = mysqli_query($mysqli,$query);
+                $rows = mysqli_fetch_row($result);
+              ?>
               <h1 class='text-center'>Talent</h1>
-              <h1 class='text-center display-4'>5</h1>
+              <h1 class='text-center display-4'><?php echo $rows[0]; ?></h1>
             </div>
           </div>
           <div class="col-md-6">
             <div class="col-md-12 border border-primary">
+              <?php
+                $query = "SELECT COUNT(*) FROM venue";
+                $result = mysqli_query($mysqli,$query);
+                $rows = mysqli_fetch_row($result);
+              ?>
               <h1 class='text-center'>Venues</h1>
-              <h1 class='text-center display-4'>2</h1>
+              <h1 class='text-center display-4'><?php echo $rows[0]; ?></h1>
             </div>
 
           </div>
