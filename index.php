@@ -12,7 +12,7 @@
         <div class="row">
           <div class="col-md-8">
             <!-- Title -->
-            <h1 class="display-2">Gig Hub</h1>
+            <h1 class="display-2">Event Plaza</h1>
 
             <!-- Description -->
             <h3 class="display-4">Hello World! - Alpha</h3>
