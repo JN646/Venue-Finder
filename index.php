@@ -6,7 +6,7 @@
 <body>
   <div class="container-fluid">
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
-    <div class="md-col-12">
+    <div class="col-md-12">
 
       <!-- Jumbotron -->
       <div id="jumboHome" class="jumbotron">
