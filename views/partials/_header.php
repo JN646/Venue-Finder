@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <!-- Page title -->
-    <title>Venue Finder</title>
+    <title>Event Plaza</title>
 
     <!-- Server config file -->
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_var.php"); ?>

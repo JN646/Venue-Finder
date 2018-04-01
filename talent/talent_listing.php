@@ -15,6 +15,7 @@
           // output data of each row
           echo "<table class='table table-bordered'>";
               echo "<tr>";
+                  echo "<th class='text-center'>Profile</th>";
                   echo "<th class='text-center'>ID</th>";
                   echo "<th class='text-center'>Name</th>";
                   echo "<th class='text-center'>Type</th>";
@@ -25,6 +26,8 @@
               echo "</tr>";
           while($row = mysqli_fetch_assoc($result)) {
               echo "<tr>";
+                  echo "<td class='text-center'><a href=../talent/talent_index.php?talent_id=" .$row['talent_id'].
+          ">Profile</a></td>";
                   echo "<td class='text-center'>" . $row["talent_id"] . "</th>";
                   echo "<td class='text-center'>" . $row["talent_name"] . "</th>";
                   echo "<td class='text-center'>" . $row["talent_type"] . "</th>";
