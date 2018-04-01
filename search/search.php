@@ -23,6 +23,17 @@
                 </select>
                 <br>
 
+                <!-- County -->
+                <label for="">County</label>
+                <br>
+                <select class="form-control" name="">
+                  <option value="0">Please Select</option>
+                  <option value="1">Bedfordshire</option>
+                  <option value="2">London</option>
+                  <option value="3">Yorkshire</option>
+                </select>
+                <br>
+
                 <!-- postcode -->
                 <label for="">Postcode</label>
                 <br>
