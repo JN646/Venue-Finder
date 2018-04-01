@@ -23,15 +23,36 @@
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
       <div class="row">
+
+        <!-- Side bar -->
         <div class="col-md-2 border">
           <img src="https://picsum.photos/150" alt="Profile Picture" width="100%">
           <h3>Sidebar</h3>
-          <p>Rating:</p>
-          <p>Bookings:</p>
-          <p>Type: <?php echo $venue_type; ?></p>
-          <p>Subtype:</p>
-          <p>Location: <?php echo $venue_country; ?></p>
+          <table width='100%'>
+            <tr>
+              <td>Rating:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bookings:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Type:</td>
+              <td><?php echo $venue_type; ?></td>
+            </tr>
+            <tr>
+              <td>Sub Type:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Country</td>
+              <td><?php echo $venue_country; ?></td>
+            </tr>
+          </table>
         </div>
+
+        <!-- Main Content -->
         <div class="col-md-10">
           <h1 class="display-4"><?php echo $venue_name; ?></h1>
           <div id="ProfileBio" class="border">
@@ -40,6 +61,7 @@
           </div>
           <br>
         </div>
+
       </div>
     </div>
   <!-- Footer -->

@@ -23,47 +23,81 @@
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
       <div class="row">
+
+        <!-- Sidebar -->
         <div class="col-md-2 border">
           <img src="https://picsum.photos/150" alt="Profile Picture" width="100%">
           <h3>Sidebar</h3>
-          <p>Rating:</p>
-          <p>Bookings:</p>
-          <p>Type: <?php echo $talent_type; ?></p>
-          <p>Subtype:</p>
-          <p>Location: <?php echo $talent_country; ?></p>
+          <table width='100%'>
+            <tr>
+              <td>Rating:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bookings:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Type:</td>
+              <td><?php echo $talent_type; ?></td>
+            </tr>
+            <tr>
+              <td>Sub Type:</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Country</td>
+              <td><?php echo $talent_country; ?></td>
+            </tr>
+          </table>
         </div>
+
+        <!-- Main Content -->
         <div class="col-md-10">
           <h1 class="display-4"><?php echo $talent_name; ?></h1>
+
+          <!-- Bio Sections -->
           <div id="ProfileBio" class="border">
             <h3>Bio</h3>
             <?php echo $talent_bio; ?>
           </div>
           <br>
+
+          <!-- Media Sections -->
           <div class="row">
+
+            <!-- Media Block 1 -->
             <div class="col-md-3">
               <div class="col-md-12 border">
                 <h3>Media</h3>
                 <img src="https://picsum.photos/150" width="100%" alt="Profile Picture">
               </div>
             </div>
+
+            <!-- Media Block 2 -->
             <div class="col-md-3">
               <div class="col-md-12 border">
                 <h3>Media</h3>
                 <img src="https://picsum.photos/150" width="100%" alt="Profile Picture">
               </div>
             </div>
+
+            <!-- Media Block 3 -->
             <div class="col-md-3">
               <div class="col-md-12 border">
                 <h3>Media</h3>
                 <img src="https://picsum.photos/150" width="100%" alt="Profile Picture">
               </div>
             </div>
+
+            <!-- Media Block 4 -->
             <div class="col-md-3">
               <div class="col-md-12 border">
                 <h3>Media</h3>
                 <img src="https://picsum.photos/150" width="100%" alt="Profile Picture">
               </div>
             </div>
+
           </div>
         </div>
       </div>
