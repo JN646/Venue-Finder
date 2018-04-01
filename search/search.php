@@ -11,31 +11,34 @@
           <div class="col-md-12 border">
             <h1>Filters</h1>
             <form class="" action="index.html" method="post">
-              <!-- Type -->
-              <label for="">Type</label>
-              <br>
-              <select class="" name="">
-                <option value="">Musician</option>
-                <option value="">Magic</option>
-                <option value="">DJ</option>
-              </select>
-              <br>
+              <div class='form-group'>
+                <!-- Type -->
+                <label for="">Type</label>
+                <br>
+                <select class="form-control" name="">
+                  <option value="0">Please Select</option>
+                  <option value="1">Musician</option>
+                  <option value="2">Magic</option>
+                  <option value="3">DJ</option>
+                </select>
+                <br>
 
-              <!-- postcode -->
-              <label for="">Postcode</label>
-              <br>
-              <input type="text" name="" value="">
-              <br>
+                <!-- postcode -->
+                <label for="">Postcode</label>
+                <br>
+                <input class="form-control" type="text" name="" value="">
+                <br>
 
-              <!-- Distance -->
-              <label for="">Distance</label>
-              <br>
-              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-              <br>
+                <!-- Distance -->
+                <label for="">Distance</label>
+                <br>
+                <input class="form-control" type="range" min="1" max="100" value="50" class="slider" id="distanceRange">
+                <br>
 
-              <!-- Filter Button -->
-              <br>
-              <button type="button" name="button">Filter</button>
+                <!-- Filter Button -->
+                <br>
+                <button class="form-control btn btn-primary" type="submit" name="submit">Filter</button>
+              </div>
             </form>
           </div>
         </div>
@@ -58,7 +61,8 @@
                     echo "</tr>";
                 while($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
-                        echo "<td class='text-center'>" . $row["talent_id"] . "</th>";
+                        echo "<td class='text-center'><a href=../talent/talent_index.php?talent_id=" .$row['talent_id'].
+												">Profile</a></th>";
                         echo "<td class='text-center'>" . $row["talent_name"] . "</th>";
                         echo "<td class='text-center'>" . $row["talent_type"] . "</th>";
                         echo "<td class='text-center'>" . $row["talent_country"] . "</th>";

@@ -4,6 +4,22 @@
 <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_config.php"); ?>
 <body>
   <div class="container-fluid">
+    <?php
+    // Get talent_id from URL.
+    $UID = (int)$_GET["talent_id"];
+
+    // Attempt select query execution
+    $sql_talent = "SELECT * FROM talent WHERE talent_id='$UID'";
+    $result = mysqli_query($mysqli, $sql_talent);
+    $rs = mysqli_fetch_array($result);
+
+    // Assign Variables.
+    $talent_name = $rs['talent_name'];
+    $talent_bio = $rs['talent_bio'];
+    $talent_type = $rs['talent_type'];
+    $talent_country = $rs['talent_country'];
+
+     ?>
     <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="md-col-12">
       <div class="row">
@@ -12,19 +28,15 @@
           <h3>Sidebar</h3>
           <p>Rating:</p>
           <p>Bookings:</p>
-          <p>Type:</p>
+          <p>Type: <?php echo $talent_type; ?></p>
           <p>Subtype:</p>
-          <p>Location:</p>
+          <p>Location: <?php echo $talent_country; ?></p>
         </div>
         <div class="col-md-10">
-          <h1 class="display-4">Welcome [Username]</h1>
-          <p>Dummy Page</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1 class="display-4"><?php echo $talent_name; ?></h1>
           <div id="ProfileBio" class="border">
             <h3>Bio</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <?php echo $talent_bio; ?>
           </div>
           <br>
           <div class="row">

@@ -36,7 +36,7 @@ class ApplicationVersion
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>user_session/login.php">Login</a></li>
-    <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>/talent/talent_index.php">Talent</a></li>
+    <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>/talent/talent_index.php?talent_id=1">Talent Profile</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>user_session/register.php">Register</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>/talent/talent_listing.php">Listing</a></li>
     <li class="nav-item"><a class="nav-link" href="<?php echo $environment; ?>/venues/venue_listing.php">Venue</a></li>
