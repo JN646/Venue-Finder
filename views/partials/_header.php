@@ -9,6 +9,7 @@
     <!-- Server config file -->
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_var.php"); ?>
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/functions/class_lib.php"); ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/lib/meekrodb.2.3.class.php"); ?>
 
     <!-- Bootstrap file -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

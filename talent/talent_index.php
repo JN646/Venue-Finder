@@ -85,13 +85,13 @@
 
           <!-- Bio Sections -->
           <?php
-          if ($talent_bio == '') {
-          echo "<div id='ProfileBio' class='border'>";
-            echo "<h3>Bio</h3>";
-            echo $talent_bio;
-          echo "</div>";
-          echo "<br>";
-          }
+            if ($talent_bio == '') {
+              echo "<div id='ProfileBio' class='border'>";
+                echo "<h3>Bio</h3>";
+                echo $talent_bio;
+              echo "</div>";
+              echo "<br>";
+            }
           ?>
 
           <!-- Media Sections -->
