@@ -8,8 +8,8 @@
     <div class="col-md-12">
 
       <?php
-        $username = 'David';
-        $password = 'MyPassword';
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
