@@ -1,66 +1,22 @@
 <?php
-  /**
-   * Event Class
-   */
-  class EventBooking
+/**
+ * User Management
+ */
+class User
+{
+  var $username;
+  var $password;
+
+  function __construct($argument)
   {
-    var $eventName;
-    var $eventTalentId;
-    var $eventVenueId;
-    var $eventDate;
-    var $eventTime;
-
-    function __construct($argument)
-    {
-      # code...
-    }
-
-    function EventCreate()
-    {
-      # code...
-    }
-
-    function EventEdit()
-    {
-      # code...
-    }
-
-    function EventDelete()
-    {
-      # code...
-    }
+    # code...
   }
 
-  /**
-   * Talent
-   */
-  class Talent
+  function CreateUser()
   {
-    var $talenttName;
-    var $talentType;
-    var $talentSubtype;
-    var $talentDistance;
-
-    function __construct($argument)
-    {
-      # code...
-    }
-
-    function TalentCreate()
-    {
-      # code...
-    }
-
-    function TalentEdit()
-    {
-      # code...
-    }
-
-    function TalentDelete()
-    {
-      # code...
-    }
+    # code...
   }
+}
 
   class ApplicationVersion
   {
