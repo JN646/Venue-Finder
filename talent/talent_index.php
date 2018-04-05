@@ -18,9 +18,12 @@
     $talent_profilepicture = $rs['talent_profilepicture'];
     $talent_bio = $rs['talent_bio'];
     $talent_type = $rs['talent_type'];
+    $talent_subtype = $rs['talent_subtype'];
     $talent_country = $rs['talent_country'];
     $talent_county = $rs['talent_county'];
     $talent_town = $rs['talent_town'];
+    $talent_rating = $rs['talent_rating'];
+    $talent_booking = $rs['talent_bookings'];
 
      ?>
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
@@ -46,15 +49,22 @@
             echo '<img width=100% src="../user_data/profile_picture/nopp.png" />';
           }
           ?>
-          <h3>Sidebar</h3>
+
+          <hr>
+
+          <h3>Details</h3>
+
+          <!-- Details Table -->
           <table width='100%'>
             <tr>
               <td>Rating:</td>
-              <td></td>
+
+              <!-- Round ratings to 2 decimals -->
+              <td><?php echo number_format((float)$talent_rating, 2, '.', ''); ?></td>
             </tr>
             <tr>
               <td>Bookings:</td>
-              <td></td>
+              <td><?php echo $talent_booking; ?></td>
             </tr>
             <tr>
               <td>Type:</td>
@@ -62,7 +72,7 @@
             </tr>
             <tr>
               <td>Sub Type:</td>
-              <td></td>
+              <td><?php echo $talent_subtype; ?></td>
             </tr>
             <tr>
               <td>Country</td>
@@ -85,7 +95,7 @@
 
           <!-- Bio Sections -->
           <?php
-            if ($talent_bio == '') {
+            if ($talent_bio !== '') {
               echo "<div id='ProfileBio' class='border'>";
                 echo "<h3>Bio</h3>";
                 echo $talent_bio;
