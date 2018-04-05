@@ -56,32 +56,44 @@
 
           <!-- Details Table -->
           <table width='100%'>
+
+            <!-- Ratings -->
             <tr>
               <td>Rating:</td>
-
-              <!-- Round ratings to 2 decimals -->
-              <td><?php echo number_format((float)$talent_rating, 2, '.', ''); ?></td>
+              <td><?php echo number_format((float)$talent_rating, 2, '.', ''); ?></td> <!-- Round ratings to 2 decimals -->
             </tr>
+
+            <!-- Number of Bookings -->
             <tr>
               <td>Bookings:</td>
               <td><?php echo $talent_booking; ?></td>
             </tr>
+
+            <!-- Type of Talent -->
             <tr>
               <td>Type:</td>
               <td><?php echo $talent_type; ?></td>
             </tr>
+
+            <!-- Sub Type of Talent -->
             <tr>
               <td>Sub Type:</td>
               <td><?php echo $talent_subtype; ?></td>
             </tr>
+
+            <!-- Country -->
             <tr>
               <td>Country</td>
               <td><?php echo $talent_country; ?></td>
             </tr>
+
+            <!-- County -->
             <tr>
               <td>County</td>
               <td><?php echo $talent_county; ?></td>
             </tr>
+
+            <!-- Town -->
             <tr>
               <td>Town</td>
               <td><?php echo $talent_town; ?></td>
