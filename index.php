@@ -1,11 +1,11 @@
 <!-- Header -->
-<?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_header.php"); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_header.php"); ?>
 <!-- DB Config -->
-<?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_config.php"); ?>
-<?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/functions/func_countstat.php"); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/config/db_config.php"); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/functions/func_countstat.php"); ?>
 <body>
   <div class="container-fluid">
-    <?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_nav.php"); ?>
     <div class="col-md-12">
 
       <!-- Jumbotron -->
@@ -23,6 +23,36 @@
           </div>
         </div>
       </div>
+
+      <!-- Number of Things -->
+      <div class="row">
+        <!-- Number of Talent -->
+        <div class="col-md-4">
+          <div class="col-md-12 border border-primary">
+            <h1 class='text-center'>Talent</h1>
+            <h1 class='text-center display-4'><?php echo StatCounters::counterTalent() ?></h1>
+          </div>
+        </div>
+
+        <!-- Number of Venues -->
+        <div class="col-md-4">
+          <div class="col-md-12 border border-success">
+            <h1 class='text-center'>Venues</h1>
+            <h1 class='text-center display-4'><?php echo StatCounters::counterVenues() ?></h1>
+          </div>
+        </div>
+
+        <!-- Number of Events -->
+        <div class="col-md-4">
+          <div class="col-md-12 border border-danger">
+            <h1 class='text-center'>Events</h1>
+            <h1 class='text-center display-4'><?php echo StatCounters::counterEvents() ?></h1>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr>
 
       <!-- Intro Text -->
       <h1><?php echo "Hello World!"; ?></h1>
@@ -62,33 +92,8 @@
           </div>
         </div>
       </div>
-
-      <br>
-      <hr>
-
-        <!-- Number of Artists -->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="col-md-12 border border-primary">
-              <h1 class='text-center'>Talent</h1>
-              <h1 class='text-center display-4'><?php echo StatCounters::counterTalent() ?></h1>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="col-md-12 border border-primary">
-              <h1 class='text-center'>Venues</h1>
-              <h1 class='text-center display-4'><?php echo StatCounters::counterVenues() ?></h1>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="col-md-12 border border-primary">
-              <h1 class='text-center'>Events</h1>
-              <h1 class='text-center display-4'><?php echo StatCounters::counterEvents() ?></h1>
-            </div>
-          </div>
-        </div>
     </div>
 
   <!-- Footer -->
-<?php include ($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_footer.php"); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"] . "/venue/venue-finder/views/partials/_footer.php"); ?>
 </div>
