@@ -13,9 +13,10 @@ body {
 
 #jumboHome {
   color: white;
-  background-image: url(https://picsum.photos/1600/300);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
+  background-image: url(../images/bg-1-repeat.jpg);
+  background-repeat: repeat;
+  /* background-size: cover; */
 }
 #jumboAbout {
   color: white;
