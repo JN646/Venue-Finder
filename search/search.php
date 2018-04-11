@@ -53,12 +53,21 @@
             </form>
           </div>
         </div>
+
+        <!-- Main content -->
         <div class="col-md-10">
-          <h1>Results</h1>
           <?php
+
+            // Get results
             $sql = "SELECT * FROM talent";
             $result = mysqli_query($mysqli, $sql);
+
+            // Results number
+            echo "<h1>Results " . mysqli_num_rows($result) . "</h1>";
+
+            // Get results from database
             if (mysqli_num_rows($result) > 0) {
+
                 // output data of each row
                 echo "<table class='table table-bordered'>";
                     echo "<tr>";
@@ -70,6 +79,8 @@
                         echo "<th class='text-center'>Town</th>";
                         echo "<th class='text-center'>Distance</th>";
                     echo "</tr>";
+
+                // Get row data
                 while($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                         echo "<td class='text-center'><a href=../talent/talent_index.php?talent_id=" .$row['talent_id'].
@@ -84,6 +95,7 @@
                 }
                 echo "</table>";
             } else {
+                // No results
                 echo "0 results";
             }
 
