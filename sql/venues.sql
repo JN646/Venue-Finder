@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 04, 2018 at 04:56 PM
+-- Generation Time: Apr 15, 2018 at 01:01 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -44,26 +44,30 @@ DROP TABLE IF EXISTS `talent`;
 CREATE TABLE IF NOT EXISTS `talent` (
   `talent_id` int(11) NOT NULL AUTO_INCREMENT,
   `talent_name` varchar(200) NOT NULL,
-  `talent_profilepicture` varchar(200) NOT NULL COMMENT 'Profile Picture filename.',
+  `talent_profilepicture` varchar(200) DEFAULT NULL COMMENT 'Profile Picture filename.',
   `talent_type` varchar(30) NOT NULL,
+  `talent_subtype` varchar(100) NOT NULL COMMENT 'Subtype of act',
   `talent_bio` text NOT NULL COMMENT 'Talent Biography.',
-  `talent_country` varchar(30) NOT NULL,
+  `talent_country` varchar(30) NOT NULL COMMENT 'Country of the talent.',
   `talent_county` varchar(30) NOT NULL,
   `talent_town` varchar(30) NOT NULL,
   `talent_distance` int(11) NOT NULL,
+  `talent_rating` float NOT NULL COMMENT 'Average Rating',
+  `talent_bookings` int(11) NOT NULL COMMENT 'Number of Bookings',
   PRIMARY KEY (`talent_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `talent`
 --
 
-INSERT INTO `talent` (`talent_id`, `talent_name`, `talent_profilepicture`, `talent_type`, `talent_bio`, `talent_country`, `talent_county`, `talent_town`, `talent_distance`) VALUES
-(1, 'John Smith', 'usermale1.jpg', 'Singer', 'This is some test bio for John Smith.', 'United Kingdom', 'Bedfordshire', 'Bedford', 20),
-(2, 'The Band', '0', 'Rock Band', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary re', 'United Kingdom', 'Bedfordshire', 'Kempston', 25),
-(3, 'New Person', '0', 'Musician', 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring whi', 'United States of America', 'New York', 'Brooklyn', 10),
-(4, 'New Person', '0', 'Musician', '', 'United States of America', 'New York', 'Brooklyn', 10),
-(5, 'Mr Edgar', '0', 'Magician', 'Hello, I am Mr Edgar, I hate the world.', 'United Kingdom', 'Bedfordshire', 'Bedford', 30);
+INSERT INTO `talent` (`talent_id`, `talent_name`, `talent_profilepicture`, `talent_type`, `talent_subtype`, `talent_bio`, `talent_country`, `talent_county`, `talent_town`, `talent_distance`, `talent_rating`, `talent_bookings`) VALUES
+(1, 'John Smith', 'usermale1.jpg', 'Singer', 'Jazz', 'This is some test bio for John Smith.', 'United Kingdom', 'Bedfordshire', 'Bedford', 20, 3, 10),
+(2, 'The Band', '0', 'Band', 'Rock', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary re', 'United Kingdom', 'Bedfordshire', 'Kempston', 25, 1.1, 4),
+(3, 'New Person', '0', 'Musician', 'Acoustic', 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring whi', 'United States of America', 'New York', 'Brooklyn', 10, 3.2, 7),
+(4, 'New Person', '0', 'Musician', 'Acoustic', '', 'United States of America', 'New York', 'Brooklyn', 10, 4, 11),
+(5, 'Mr Edgar', '0', 'Magician', 'Close-Up', 'Hello, I am Mr Edgar, I hate the world.', 'United Kingdom', 'Bedfordshire', 'Bedford', 30, 2.25, 6),
+(6, 'The Deception', '0', 'Magician', 'Confidence Trickster', 'Something about Deception and things.', 'United Kingdom', 'Bedfordshire', 'Bedford', 20, 1, 1);
 
 -- --------------------------------------------------------
 
