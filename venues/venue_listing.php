@@ -25,7 +25,7 @@
           while($row = mysqli_fetch_assoc($result)) {
               echo "<tr>";
                   echo "<td class='text-center'><a href=../venues/venue_index.php?venue_id=" .$row['venue_id'].
-              ">Profile</a></td>";
+              "><i class='fas fa-user'></i></a></td>";
                   echo "<td class='text-center'>" . $row["venue_id"] . "</th>";
                   echo "<td class='text-center'>" . $row["venue_name"] . "</th>";
                   echo "<td class='text-center'>" . $row["venue_type"] . "</th>";

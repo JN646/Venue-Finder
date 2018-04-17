@@ -60,7 +60,54 @@
             <!-- Ratings -->
             <tr>
               <td>Rating:</td>
-              <td><?php echo number_format((float)$talent_rating, 2, '.', ''); ?></td> <!-- Round ratings to 2 decimals -->
+              <td>
+                <?php
+                // 1 Star
+                if (number_format((float)$talent_rating, 2, '.', '') == 1) {
+                  echo "<i class='far fa-star'></i>";
+                }
+
+                // 1.5 Star
+                if (number_format((float)$talent_rating, 2, '.', '') > 1 && number_format((float)$talent_rating, 2, '.', '') < 2) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star-half'></i>";
+                }
+
+                // 2 Star
+                if (number_format((float)$talent_rating, 2, '.', '') == 2) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i>";
+                }
+
+                // 2.5 Star
+                if (number_format((float)$talent_rating, 2, '.', '') > 2 && number_format((float)$talent_rating, 2, '.', '') < 3) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star-half'></i>";
+                }
+
+                // 3 Star
+                if (number_format((float)$talent_rating, 2, '.', '') == 3) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>";
+                }
+
+                // 3.5 Star
+                if (number_format((float)$talent_rating, 2, '.', '') > 3 && number_format((float)$talent_rating, 2, '.', '') < 4) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i></i><i class='far fa-star-half'></i>";
+                }
+
+                // 4 Star
+                if (number_format((float)$talent_rating, 2, '.', '') == 4) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>";
+                }
+
+                // 4.5 Star
+                if (number_format((float)$talent_rating, 2, '.', '') > 4 && number_format((float)$talent_rating, 2, '.', '') < 5) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i></i><i class='far fa-star-half'></i>";
+                }
+
+                // 5 Star
+                if (number_format((float)$talent_rating, 2, '.', '') == 5) {
+                  echo "<i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i><i class='far fa-star'></i>";
+                }
+                ?>
+              </td> <!-- Round ratings to 2 decimals -->
             </tr>
 
             <!-- Number of Bookings -->
